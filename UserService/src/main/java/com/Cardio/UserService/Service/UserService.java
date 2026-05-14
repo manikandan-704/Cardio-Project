@@ -1,4 +1,4 @@
-package com.Cardio.UserService.service;
+package com.Cardio.UserService.Service;
 
 import com.Cardio.UserService.Model.User;
 import com.Cardio.UserService.Repository.UserRepository;

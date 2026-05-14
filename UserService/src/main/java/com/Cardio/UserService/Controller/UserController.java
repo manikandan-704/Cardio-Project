@@ -2,7 +2,7 @@ package com.Cardio.UserService.Controller;
 
 import com.Cardio.UserService.dto.RegisterRequest;
 import com.Cardio.UserService.dto.UserResponse;
-import com.Cardio.UserService.service.UserService;
+import com.Cardio.UserService.Service.UserService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
