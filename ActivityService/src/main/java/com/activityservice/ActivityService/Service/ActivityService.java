@@ -6,6 +6,7 @@ import com.activityservice.ActivityService.Model.ActivityType;
 import com.activityservice.ActivityService.dto.ActivityRequest;
 import com.activityservice.ActivityService.dto.ActivityResponse;
 import lombok.RequiredArgsConstructor;
+import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -50,5 +51,11 @@ public class ActivityService {
         return activities.stream()
                 .map(this::mapToResponse)
                 .collect(Collectors.toList());
+    }
+
+    public ActivityResponse getActivityById(String activityId) {
+        return activityRepository.findById(activityId)
+                .map(this::mapToResponse)
+                .orElseThrow(()-> new RuntimeException("Activity not found with id: "+activityId));
     }
 }

@@ -31,3 +31,8 @@ spring:
         # Fixed the typo: PostgreSQLDialect (not PostgresSQLDialect)
         dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true # Optional: helpful for debugging
+
+    eureka:
+      client:
+        serviceUrl:
+          defaultZone: http://localhost:8761/eureka/
