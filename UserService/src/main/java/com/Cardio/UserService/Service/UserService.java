@@ -5,11 +5,13 @@ import com.Cardio.UserService.Repository.UserRepository;
 import com.Cardio.UserService.dto.RegisterRequest;
 import com.Cardio.UserService.dto.UserResponse;
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.jspecify.annotations.Nullable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class UserService {
 
     @Autowired
@@ -57,6 +59,7 @@ public class UserService {
     }
 
     public @Nullable Boolean existByUserId(String userId) {
+        log.info("Calling User validation API for userId: {}", userId);
         return repository.existsById(userId);
     }
 }
